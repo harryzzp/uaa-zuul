@@ -13,7 +13,7 @@ import javax.persistence.Column;
 import javax.persistence.EntityListeners;
 import javax.persistence.MappedSuperclass;
 import java.io.Serializable;
-import java.time.Instant;
+import java.sql.Timestamp;
 
 /**
  * Base abstract class for entities which will hold definitions for created, last modified by and created,
@@ -25,27 +25,27 @@ import java.time.Instant;
 @Data
 public abstract class AbstractAuditingEntity implements Serializable {
 
-    private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 5930556144862128783L;
 
-    @CreatedBy
-    @Column(name = "created_by", nullable = false, length = 50, updatable = false)
-    @JsonIgnore
-    private String createdBy;
+	@CreatedBy
+	@Column(name = "created_by", nullable = false, length = 50, updatable = false)
+	@JsonIgnore
+	private String createdBy;
 
-    @CreatedDate
-    @Column(name = "created_date", nullable = false)
-    @JsonIgnore
-    private Instant createdDate = Instant.now();
+	@CreatedDate
+	@Column(name = "created_date", nullable = false)
+	@JsonIgnore
+	private Timestamp createdDate;
 
-    @LastModifiedBy
-    @Column(name = "last_modified_by", length = 50)
-    @JsonIgnore
-    private String lastModifiedBy;
+	@LastModifiedBy
+	@Column(name = "last_modified_by", length = 50)
+	@JsonIgnore
+	private String lastModifiedBy;
 
-    @LastModifiedDate
-    @Column(name = "last_modified_date")
-    @JsonIgnore
-    private Instant lastModifiedDate = Instant.now();
+	@LastModifiedDate
+	@Column(name = "last_modified_date")
+	@JsonIgnore
+	private Timestamp lastModifiedDate;
 
 
 }

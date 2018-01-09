@@ -16,7 +16,7 @@ import java.util.Set;
 @Data
 @EqualsAndHashCode(callSuper = false)
 public class SysRole extends AbstractAuditingEntity{
-    private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 3100762910033927226L;
     @Id
     @GeneratedValue
     private Long id;

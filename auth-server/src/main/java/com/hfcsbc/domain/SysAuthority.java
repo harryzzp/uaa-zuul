@@ -15,6 +15,7 @@ import javax.persistence.*;
 @Data
 @EqualsAndHashCode(callSuper = false)
 public  class SysAuthority extends AbstractAuditingEntity{
+    private static final long serialVersionUID = -8496452866104582235L;
     @Id
     @GeneratedValue
     private Long id;

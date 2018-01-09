@@ -21,7 +21,7 @@ import java.util.stream.Collectors;
 /**
  * Created by wangyunfei on 2017/6/9.
  */
-//@Service("userDetailsService")
+@Service("userDetailsService")
 @Slf4j
 public class DomainUserDetailsService implements UserDetailsService {
 

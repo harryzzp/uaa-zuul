@@ -6,18 +6,18 @@ spring:
 
   jpa:
     open-in-view: true
-    database: POSTGRESQL
+    database: mysql
     show-sql: true
     hibernate:
       ddl-auto: update
   datasource:
-    platform: postgres
-    url: jdbc:postgresql://192.168.1.140:5432/auth
-    username: wang
-    password: yunfei
-    driver-class-name: org.postgresql.Driver
+    platform: mysql
+    url: jdbc:mysql://localhost:3306/auth?useUnicode=true&characterEncoding=utf8&useSSL=false
+    username: harry
+    password: 1qaz@WSX
+    driver-class-name: com.mysql.jdbc.Driver
   redis:
-    host: 192.168.1.140
+    host: localhost
 
 server:
   port: 9999
