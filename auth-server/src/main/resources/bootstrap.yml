@@ -13,8 +13,8 @@ spring:
   datasource:
     platform: mysql
     url: jdbc:mysql://localhost:3306/auth?useUnicode=true&characterEncoding=utf8&useSSL=false
-    username: harry
-    password: 1qaz@WSX
+    username: auth
+    password: auth
     driver-class-name: com.mysql.jdbc.Driver
   redis:
     host: localhost
