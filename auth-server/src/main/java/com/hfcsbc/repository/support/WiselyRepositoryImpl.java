@@ -24,8 +24,6 @@ public class WiselyRepositoryImpl<E, PK extends Serializable> extends SimpleJpaR
         this.entityManager = entityManager;
     }
 
-
-
     @Override
     public Page<E> queryByExampleWithRange(Example example, List<Range<E>> ranges, Pageable pageable) {
         Specification<E> byExample = new ByExampleSpecification<>(example);

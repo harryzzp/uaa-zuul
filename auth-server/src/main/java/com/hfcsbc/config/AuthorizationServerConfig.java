@@ -1,6 +1,7 @@
 package com.hfcsbc.config;
 
-import com.hfcsbc.security.DomainUserDetailsService;
+import com.hfcsbc.service.DomainUserDetailsService;
+import com.netflix.discovery.converters.Auto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -31,6 +32,9 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
 	public UserDetailsService userDetailsService() {
 		return new DomainUserDetailsService();
 	}
+
+//	@Autowired
+//	public UserDetailsService userDetailsService;
 
 	@Bean
 	public RedisTokenStore tokenStore() {

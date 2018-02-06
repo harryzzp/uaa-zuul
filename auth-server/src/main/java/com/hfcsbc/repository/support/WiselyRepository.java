@@ -15,7 +15,6 @@ import java.util.List;
 @NoRepositoryBean
 public interface WiselyRepository<E, PK extends Serializable> extends JpaRepository<E, PK> {
 
-
 		Page<E> queryByExampleWithRange(Example example, List<Range<E>> ranges, Pageable pageable);
 	    
 }
